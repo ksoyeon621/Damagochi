@@ -4,9 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.damadama.MainActivity">
+    tools:context="com.example.damadama.MainActivity"
+    android:orientation="vertical">
 
+    <GridLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    >
+         <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" 배고픔  "
+        android:textSize="20dp"/>
+         <ProgressBar
+        android:layout_width="240dp"
+        android:layout_height="wrap_content"
+        android:paddingTop="12dp"
+        android:max="100"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:id="@+id/progress_hungry" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="  배부름"
+            android:textSize="20dp"/>
+    </GridLayout>
     <FrameLayout
+        android:layout_marginTop="200dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center">
@@ -62,7 +87,14 @@
             android:layout_marginLeft="5dp"
             android:src="@drawable/happy_ani"
             />
-
     </FrameLayout>
+    <Button
+        android:id="@+id/reset"
+        android:text="RESET"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="resetClick"/>
 </LinearLayout>
 
